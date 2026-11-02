@@ -1,0 +1,17 @@
+export type TaskStatus = 'pending' | 'in-progress' | 'completed';
+
+export interface Task {
+  id: number;
+  title: string;
+  description: string;
+  status: TaskStatus;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+// Interface untuk payload saat Create/Update (tanpa id & timestamp)
+export interface TaskInput {
+  title: string;
+  description?: string;
+  status?: TaskStatus;
+}
